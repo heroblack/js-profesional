@@ -1,39 +1,43 @@
-import React, { useState } from "react";
-import data from "../../../json/loader.json";
-import Loader from "../Loader";
-import logo from "../../../image/platzi.png";
-import video from "../../../video/que-es-core.mp4";
-console.log(data);
-import "../../../less/style.less";
-import "../../../sass/style.scss";
-import "../../../stylus/style.styl";
+import React, { Component } from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-function App() {
-  const [loaderList, setLoaderList] = useState([]);
-  async function handleClick() {
-    setLoaderList(data.loaders);
-    const { alerta } = await import("../../alert");
-    alerta("este modulo ha cargado dinamicamnete cool");
+//iconos
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import {
+  faCheckSquare,
+  faCoffee,
+  faHeart
+} from "@fortawesome/free-solid-svg-icons";
+library.add(fab, faCheckSquare, faCoffee, faHeart);
+
+//components
+import Layout from "../Layout";
+
+//pages
+import BadgeNew from "../../pages/BadgeNew";
+import Badges from "../../pages/Badges";
+import NotFound from "../../pages/NotFound";
+
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <Layout>
+          <Switch>
+            <Route exact path="/badges/b" component={Badges} />
+            <Route exact path="/badges/new" component={BadgeNew} />
+            <Route exact component={NotFound} />
+            {/* <Route
+            exact
+            path="/badge"
+            component={() => <Badge {...this.props} isAuthed={true} />}
+          /> */}
+          </Switch>
+        </Layout>
+      </BrowserRouter>
+    );
   }
-  return (
-    <div>
-      <p className="sass">esto es 4</p>
-      <p className="less">esto es less</p>
-      <p className="stylus">esto es stylus</p>
-      <p className="post-css">esto es postcsse</p>
-      si linda aplicación hecha en React2.js
-      <video src={video} width={360} controls poster={logo}></video>
-      <p>
-        <img src={logo} alt="" />
-      </p>
-      <ul>
-        {loaderList.map(item => (
-          <Loader data={item} key={item.id} />
-        ))}
-      </ul>
-      <button onClick={handleClick}>Loaders ?</button>
-    </div>
-  );
 }
 
 export default App;

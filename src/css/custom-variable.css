@@ -1,0 +1,12 @@
+/*Custom Media*/
+/*Desktop First*/
+@custom-media --extra-small (max-width: 479px);
+@custom-media --small (max-width: 767px);
+@custom-media --medium (max-width: 992px);
+@custom-media --large (max-width: 1024px);
+
+/*Custom Properties*/
+@custom-selector :--checkeable .sass, .less, .stylus;
+@custom-selector :--highlight :hover, :active;
+@custom-selector :--heading h1, h2, h3, h4, h5, h6;
+/*Custom Selector*/

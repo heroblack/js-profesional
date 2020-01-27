@@ -1,0 +1,30 @@
+.btn {
+  color: white;
+  background: var(--primary);
+  padding: 10px 10px;
+  border-radius: 5px;
+  box-shadow: inset 0 -5px 1px rgba(255, 255, 255, 0.3);
+  transition: all ease-out 0.5s;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    color: white;
+    /* box-shadow: 0 0 8px 8px rgba(143, 201, 60, 0.1); */
+  }
+  &.btn-red {
+    background: rgb(var(--red-btn));
+  }
+  &.btn-green {
+    background: rgb(var(--green-btn));
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+  @media (--small) {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+  }
+}

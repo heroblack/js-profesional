@@ -10,18 +10,6 @@
   font-style: normal;
 }
 
-:root {
-  --bg-color: hsl(120, 100%, 50%);
-  --btn-green: #7dcd40;
-  --btn-red: #ff4842;
-  --btn-gray: rgba(250, 240, 250, 0.2);
-  --bg-black: #213;
-  --text-white: #c1c1c1;
-  --bg-body: #f1f1f1;
-  --link-blue: #056fff;
-  --link-blue-twitter: rgba(29, 161, 242);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -29,9 +17,22 @@
 }
 
 body {
+  background-image: image-set(
+    url("../image/platzi-video.png") 1x,
+    url("../image/platzi-video-2x.png") 2x,
+    url("../image/platzi-video-3x.png") 300dpi
+  );
+  /* background: color(red alpha(50%)); */
+  /* background: hwb(240, 8%, 45%, 1); */
+  background: gray(50);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   font-size: 40px;
-  font-family: "open_sansregular";
-  background: var(--btn-red);
+  /* font-family: "open_sansregular", "Lato", system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans,
+    Helvetica Neue; */
+  font-family: Lato;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +40,17 @@ body {
   text-shadow: 1px 1px 1px black;
   color: white;
   animation: 5s latido2 infinite forwards ease-in;
+  @media (--small) {
+    background: blue;
+  }
 }
+
+.style {
+}
+
+/* .btn {
+  @apply --button;
+} */
 
 @keyframes latido {
   0% {
@@ -53,4 +64,30 @@ body {
   } */
 }
 
+@custom-selector :--checkeable .sass, .less, .stylus;
+@custom-selector :--highlight :hover, :active;
+
+:--checkeable {
+  background: red;
+}
+
+:--checkeable:--highlight {
+  background: blue;
+}
+
+ul li :any-link {
+  color: red;
+}
+/*matches and not*/
+ul li:matches(:last-child, :nth-of-type(3), :first-child) {
+  color: color(peru l(20%));
+}
 @import "./postcss.css";
+
+.stylus {
+  background: black;
+  color: white !important;
+  &:hover {
+    background: violet;
+  }
+}

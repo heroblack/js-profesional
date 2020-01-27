@@ -1,0 +1,10 @@
+.BadgeNew__hero {
+  width: 100%;
+  padding: 2rem 0;
+  /* background: url("../../../image/stars.svg"), #1b1b25; */
+  background: image-set(url("../../../image/stars.svg") 1x);
+  background-color: #1b1b25;
+  background-repeat: repeat;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}

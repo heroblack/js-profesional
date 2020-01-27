@@ -1,9 +1,14 @@
-import "../css/style.css";
-import pokemon from "./api/pokemon/index.js";
+//import "font-awesome/css/font-awesome.min.css";
+import "bootstrap/dist/css/bootstrap.css";
+import "../css/global.css";
+import "../css/buttons.css";
+
+// import pokemon from "./api/pokemon/index.js";
 //import render from "./render/index.js";
 
 import React from "react";
 import ReactDOM from "react-dom";
+
 import App from "./components/App";
 
 function render() {

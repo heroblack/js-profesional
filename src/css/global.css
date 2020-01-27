@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Anton");
+
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --red-btn: #ff4842;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --green-btn: 125, 205, 64;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --link-blue-twitter: rgba(29, 161, 242);
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --bar-first: rgba(30, 55, 68, 1);
+  --bar-middle: rgba(37, 64, 81, 1);
+  --bar-end: rgba(33, 77, 103, 1);
+  --bar-separation: 225, 255, 255;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", "Helvetica Neue", system-ui, sans-serif;
+  background-color: #f4f4f7;
+  font-size: 16px;
+}
+
+/* h1 {
+  font-family: "Anton", sans-serif;
+} */
+
+:--heading {
+  font-family: "Anton", sans-serif;
+}
+
+a.link-unstyled {
+  color: inherit;
+}
+
+a.link-unstyled:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn {
+  padding: 0.375rem 2rem;
+}
+
+.btn.btn-primary {
+  color: #fff;
+  background-color: #7dcd40;
+  border-color: #7dcd40;
+}
+
+.btn.btn-primary:not(:disabled):not(.disabled):hover {
+  color: #fff;
+  background-color: #7dcd40;
+  border-color: #7dcd40;
+}
+
+.btn.btn-primary:not(:disabled):not(.disabled):hover {
+  color: #fff;
+  background-color: #7dcd40;
+  border-color: #7dcd40;
+}
+
+.btn.btn-primary:not(:disabled):not(.disabled):active {
+  color: #fff;
+  background-color: #7dcd40;
+  border-color: #7dcd40;
+}
+
+.btn.btn-primary:not(:disabled):not(.disabled):focus {
+  box-shadow: 0 0 0 0.2rem rgba(125, 205, 64, 0.5);
+}
+
+.btn.btn-danger {
+  color: #fff;
+  background-color: #cd4040;
+  border-color: #cd4040;
+}
+
+.btn.btn-danger:not(:disabled):not(.disabled):hover {
+  color: #fff;
+  background-color: #cd4040;
+  border-color: #cd4040;
+}
+
+.btn.btn-danger:not(:disabled):not(.disabled):active {
+  color: #fff;
+  background-color: #cd4040;
+  border-color: #cd4040;
+}
+
+.btn.btn-danger:not(:disabled):not(.disabled):focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 64, 64, 0.5);
+}

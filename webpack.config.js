@@ -18,7 +18,8 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, "dist"),
     hot: true,
-    compress: true,
+    //compress: true,
+    historyApiFallback: true,
     //host: "0.0.0.0",
     port: 9000,
     inline: true,
@@ -39,7 +40,7 @@ module.exports = {
         exclude: "/node_modules/"
       },
       {
-        test: /\.(jpg|png|gif|woff|eot|ttf|svg|mp4|webm)$/,
+        test: /\.(jpg|png|gif|woff|woff2|eot|ttf|svg|mp4|webm)$/,
         use: {
           loader: "file-loader",
           options: {
@@ -66,8 +67,8 @@ module.exports = {
           },
           "postcss-loader"
         ]
-      },
-
+      }
+      /*
       {
         test: /\.less$/,
         use: [
@@ -103,8 +104,10 @@ module.exports = {
           "stylus-loader"
         ]
       }
+       */
     ]
   },
+
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
@@ -115,8 +118,8 @@ module.exports = {
       chunks: ["app"],
       filename: "index.html",
       templateParameters: {
-        titulo: "Portafolio",
-        encabezamiento: "Hola Mundo desde Webpack"
+        titulo: "Curso profesional de Javascript",
+        encabezamiento: "JS Professional"
       }
     })
     // new MiniCssExtractPlugin({
