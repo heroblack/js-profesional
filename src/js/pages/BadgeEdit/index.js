@@ -5,11 +5,28 @@ import Badge from "../../components/Badge";
 import BadgeForm from "../../components/BadgeForm";
 import api from "../../../log.js";
 import Loader from "../../components/Loader";
-class BadgeNew extends Component {
+
+class BadgeEdit extends Component {
   state = {
-    loading: false,
+    loading: true,
     error: null,
     form: { firstName: "", lastName: "", email: "", jobTitle: "", twitter: "" }
+  };
+
+  componentDidMount() {
+    this.fetchData();
+  }
+
+  fetchData = async event => {
+    this.setState({ loading: true, error: null });
+    try {
+      console.log(this.props.match.params);
+      const data = await api.badges.read(this.props.match.params.badgeId);
+      console.log("la data:", data);
+      this.setState({ loading: false, form: data });
+    } catch (error) {
+      this.setState({ loading: false, error: error });
+    }
   };
 
   handleChange = e => {
@@ -25,7 +42,7 @@ class BadgeNew extends Component {
     event.preventDefault();
     this.setState({ loading: true, error: null });
     try {
-      await api.badges.create(this.state.form);
+      await api.badges.update(this.props.match.params.badgeId, this.state.form);
       this.setState({ loading: false });
       this.props.history.push("/badges");
     } catch (error) {
@@ -59,7 +76,7 @@ class BadgeNew extends Component {
               />
             </div>
             <div className="col-6">
-              <h1>New Attendant</h1>
+              <h1>Edit Badge</h1>
               <BadgeForm
                 onChange={this.handleChange}
                 onSubmit={this.handleSubmit}
@@ -74,4 +91,4 @@ class BadgeNew extends Component {
   }
 }
 
-export default BadgeNew;
+export default BadgeEdit;

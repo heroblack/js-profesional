@@ -1,0 +1,16 @@
+.BadgeDetails__hero {
+  width: 100%;
+  padding: 2rem 0;
+  background: image-set(url("../../../image/stars.svg") 1x);
+  background-color: #1b1b25;
+  background-repeat: repeat;
+  margin-bottom: 1rem;
+  color: #fff;
+  /* background: black; */
+}
+
+.BadgeDetails__hero-attendant-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

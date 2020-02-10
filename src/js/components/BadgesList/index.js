@@ -1,50 +1,34 @@
 import React, { Component, Fragment } from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./BadgesList.css";
+
+import BadgesListItems from "../BadgesListItems";
 class BadgesList extends Component {
   render() {
+    if (this.props.badges.length === 0) {
+      return (
+        <div>
+          <h3>No were found any Badge</h3>
+          <Link className="btn btn-primary" to="/badges/new">
+            Create New Badge
+          </Link>
+        </div>
+      );
+    }
+
     return (
       <Fragment>
         <ul className="list-unstyled">
           {this.props.badges.map(badge => {
             return (
               <li key={badge.id} className="badgesListItems mb-2">
-                <div className="container-fluid">
-                  <div className="row">
-                    <div className="col-3">
-                      <img
-                        className="avatar"
-                        src={badge.avatarUrl}
-                        alt="avatar"
-                      />
-                    </div>
-                    <div className="col-9">
-                      <p className="mb-0 font-weight-bold">
-                        {badge.firstName} {badge.lastName}
-                        {/* <FontAwesomeIcon icon="check-square" />
-                  <FontAwesomeIcon icon="coffee" /> */}
-                        {/* <FontAwesomeIcon
-                    icon="heart"
-                    className="twitter"
-                    // flip="horizontal"
-                    // rotation={90}
-                    // listItem
-                    // pull="right"
-                    swapOpacity
-                  /> */}
-                        {/* <FontAwesomeIcon icon={["fad", "stroopwafel"]} /> */}
-                      </p>
-                      <p className="mb-0 text-primary">
-                        <FontAwesomeIcon
-                          icon={["fab", "twitter"]}
-                          className="twitter"
-                        />
-                        @{badge.twitter}
-                      </p>
-                      <small className="mb-0">{badge.jobTitle}</small>
-                    </div>
-                  </div>
-                </div>
+                <Link
+                  className="text-reset text-decoration-none"
+                  to={`/badges/${badge.id}`}
+                >
+                  <BadgesListItems badge={badge} />
+                </Link>
               </li>
             );
           })}

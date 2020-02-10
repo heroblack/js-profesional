@@ -1,1 +1,61 @@
-{}
+{
+  "badges": [
+    {
+      "id": "f8d5a56d-acaa-4dae-a01c-62c3ddaefb25",
+      "firstName": "Rachael",
+      "lastName": "Wilderman",
+      "email": "Elvera57@gmail.com",
+      "jobTitle": "Corporate Metrics Designer",
+      "twitter": "RachaelWilderman65223",
+      "avatarUrl": "https://www.gravatar.com/avatar/d97273bfe850ce133abd2e52e91161b3?d=identicon"
+    },
+    {
+      "firstName": "neyla",
+      "lastName": "martinez",
+      "email": "neyla@gmail.com",
+      "jobTitle": "CTO fanelsoft",
+      "twitter": "neyla77",
+      "id": "LV8ZS1y"
+    },
+    {
+      "firstName": "pepito",
+      "lastName": "perez",
+      "email": "pepito@gmail.com",
+      "jobTitle": "diseñador",
+      "twitter": "pepito",
+      "id": "esnoTJk"
+    },
+    {
+      "firstName": "snopy",
+      "lastName": "kaufman",
+      "email": "snoopy@hotmail.com",
+      "jobTitle": "characters",
+      "twitter": "snoopy",
+      "id": "Df47as3"
+    },
+    {
+      "firstName": "jana",
+      "lastName": "rojas",
+      "email": "janarojas@gmail.com",
+      "jobTitle": "teacher school",
+      "twitter": "jana77",
+      "id": "GUXMqGW"
+    },
+    {
+      "firstName": "samuel",
+      "lastName": "rojas",
+      "email": "samueldavid@gmail.com",
+      "jobTitle": "crack video game",
+      "twitter": "davigamer",
+      "id": "x8HgAva"
+    },
+    {
+      "firstName": "cristiano",
+      "lastName": "ronaldo",
+      "email": "cr7@gmail.com",
+      "jobTitle": "soccer gamer",
+      "twitter": "cr7",
+      "id": "NPov-ds"
+    }
+  ]
+}

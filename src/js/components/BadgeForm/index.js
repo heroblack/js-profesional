@@ -21,14 +21,13 @@ class BadgeForm extends Component {
     console.log("Button was clicked");
   };
 
-  handleSubmit = e => {
-    e.preventDefault();
-  };
+  // handleSubmit = e => {
+  //   e.preventDefault();
+  // };
   render() {
     return (
       <Fragment>
-        <h1>New Attendant</h1>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.props.onSubmit}>
           <div className="form-group">
             <label htmlFor="">First Name</label>
             <input
@@ -91,6 +90,10 @@ class BadgeForm extends Component {
           >
             Guardar
           </button>
+
+          {this.props.error && (
+            <p className="text-danger ">{this.props.error.message}</p>
+          )}
         </form>
       </Fragment>
     );
