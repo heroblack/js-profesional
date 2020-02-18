@@ -46,3 +46,4 @@ git remote set-url origin git@hackchan:hackchan/repo_name.git
 #remoto
 git remote add origin git@hackchan:hackchan/repo_name.git
 ```
+#REACT
